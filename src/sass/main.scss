@@ -1,7 +1,88 @@
-/*
- * Главный файл стилей.
- * Все паршалы подключаются сюда.
- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-// Стили для файла с примером HTML-фрагмента
-@import './example';
+body {
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, sans-serif;
+  line-height: 1.5;
+  color: #2a2a2a;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.info {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.info-item {
+  margin: 8px;
+  justify-content: center;
+  text-align: center;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  margin-bottom: 24px;
+  background-color: rgb(94, 94, 192);
+}
+
+.button,
+.load-more {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+button.is-hidden {
+  display: none;
+}
+
+.button > .spinner.is-hidden {
+  display: none;
+}
+
+/* gallery List */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  max-width: calc(100vw - 80px);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.gallery li {
+  height: 450px;
+  overflow: hidden;
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
+.gallery a {
+  text-decoration: none;
+  color: #2a2a2a;
+}
